@@ -1,0 +1,23 @@
+# Java / Maven
+backend/target/
+**/target/
+
+# Node
+frontend/node_modules/
+**/node_modules/
+frontend/dist/
+
+# IDE
+.classpath
+.project
+.factorypath
+.settings/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
