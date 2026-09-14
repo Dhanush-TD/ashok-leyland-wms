@@ -35,8 +35,9 @@ export default function WarehouseMap() {
   useEffect(() => {
     loadMap()
 
-    const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws'
-    const wsUrl = `${protocol}://${window.location.host}/ws/warehouse-updates`
+const wsUrl =
+  import.meta.env.VITE_WS_URL ||
+  `${window.location.protocol === 'https:' ? 'wss' : 'ws'}://${window.location.host}/ws/warehouse-updates`
     try {
       const ws = new WebSocket(wsUrl)
       wsRef.current = ws
